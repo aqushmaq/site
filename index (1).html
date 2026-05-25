@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Ahmad Qushmaq | SVP, Information Technology & Cybersecurity</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--navy:#0B1829;--navy-mid:#0F2040;--navy-card:#132650;--navy-surface:#172D5A;--gold:#D4A853;--gold-light:#F0C97A;--gold-dim:#A8842E;--gold-glow:rgba(212,168,83,0.12);--gold-border:rgba(212,168,83,0.28);--wh:#F5F0E8;--text:#C8C0B0;--muted:#6B7A94;--divider:rgba(212,168,83,0.15);}
+body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--wh);overflow-x:hidden;font-size:17px;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(11,24,41,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--divider);}
+.nav-logo{display:flex;align-items:center;gap:12px;}
+.nav-circle{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:var(--gold);}
+.nav-name{font-size:16px;font-weight:500;color:var(--wh);}
+.nav-links{display:flex;gap:2.2rem;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:14px;letter-spacing:0.07em;transition:color 0.2s;cursor:pointer;}
+.nav-links a:hover{color:var(--gold);}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 3rem;padding-top:95px;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 65% 40%,rgba(212,168,83,0.06) 0%,transparent 65%);}
+.hero-line-v{position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,transparent,var(--gold),transparent);}
+.hero-tag{font-size:13px;letter-spacing:0.24em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;gap:10px;}
+.hero-tag::before{content:'';width:30px;height:1px;background:var(--gold);opacity:0.6;}
+.hero-tag::after{content:'';width:30px;height:1px;background:var(--gold);opacity:0.6;}
+.hero-name{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,7vw,6.5rem);font-weight:700;line-height:0.95;margin-bottom:0.75rem;color:var(--wh);}
+.hero-name span{color:var(--gold);}
+.hero-divider{width:60px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin:1.2rem auto;}
+.hero-title{font-size:1rem;color:var(--muted);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:0.5rem;}
+.hero-loc{font-size:15px;color:rgba(212,168,83,0.6);margin-bottom:0.3rem;}
+.hero-contact-line{font-size:13px;color:rgba(255,255,255,0.2);margin-bottom:2.75rem;}
+.hero-desc{max-width:620px;font-size:1.08rem;line-height:2;color:var(--text);margin-bottom:2.5rem;}
+.hero-actions{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;}
+.hero-cta{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--navy);padding:1rem 2.4rem;font-size:15px;font-weight:600;letter-spacing:0.07em;cursor:pointer;border:none;transition:all 0.2s;font-family:'DM Sans',sans-serif;}
+.hero-cta:hover{background:var(--gold-light);}
+.hero-cta{text-decoration:none;}
+.hero-cta svg{width:15px;height:15px;pointer-events:none;}
+.hero-badge{font-size:13px;color:var(--gold);border:1px solid var(--gold-border);padding:0.6rem 1.2rem;letter-spacing:0.08em;background:var(--gold-glow);}
+.impact-banner{background:var(--navy-surface);border-top:1px solid var(--divider);border-bottom:1px solid var(--divider);padding:2rem 3rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;}
+.ib-item{text-align:center;padding:1rem;}
+.ib-num{font-family:'Cormorant Garamond',serif;font-size:2.7rem;font-weight:700;color:var(--gold);line-height:1;}
+.ib-label{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4;}
+section{padding:5rem 3rem;}
+.sl{font-size:12px;letter-spacing:0.28em;color:var(--gold);text-transform:uppercase;margin-bottom:0.6rem;display:flex;align-items:center;gap:8px;}
+.sl::before{content:'';width:20px;height:1px;background:var(--gold);opacity:0.7;}
+.st{font-family:'Cormorant Garamond',serif;font-size:2.7rem;font-weight:700;margin-bottom:0.4rem;line-height:1.1;color:var(--wh);}
+.st-only{margin-bottom:2.5rem;}
+.about{background:var(--navy-mid);}
+.about-grid{display:grid;grid-template-columns:1.3fr 0.7fr;gap:4.5rem;align-items:start;}
+.about-text{font-size:1.05rem;line-height:2;color:var(--text);margin-bottom:1rem;}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.stat{background:var(--navy-card);border:1px solid var(--gold-border);padding:1.5rem;position:relative;}
+.stat::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent);}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:var(--gold);line-height:1;}
+.stat-lbl{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4;}
+.awards{display:flex;flex-direction:column;gap:0.7rem;margin-top:1.75rem;}
+.award{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--muted);line-height:1.5;}
+.award-dot{width:5px;height:5px;background:var(--gold);flex-shrink:0;margin-top:6px;}
+.exp-list{display:flex;flex-direction:column;}
+.exp-item{display:grid;grid-template-columns:180px 1fr;gap:2rem;padding:2.5rem 0;border-bottom:1px solid var(--divider);}
+.exp-year{font-size:13px;color:var(--gold);letter-spacing:0.08em;padding-top:3px;line-height:1.7;}
+.exp-co{font-size:13px;color:var(--muted);margin-top:5px;opacity:0.6;}
+.exp-role{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;margin-bottom:3px;color:var(--wh);line-height:1.2;}
+.exp-org{font-size:13px;color:var(--muted);margin-bottom:12px;}
+.exp-desc{font-size:15px;color:var(--text);line-height:1.9;opacity:0.85;}
+.exp-achieve{margin-top:14px;display:flex;flex-direction:column;gap:8px;}
+.exp-achieve-item{font-size:14px;color:var(--gold);display:flex;gap:8px;line-height:1.6;}
+.exp-achieve-item::before{content:'→';flex-shrink:0;opacity:0.7;}
+.exp-savings{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+.exp-saving-pill{font-size:12px;background:var(--gold-glow);border:1px solid var(--gold-border);color:var(--gold-light);padding:4px 12px;font-weight:500;}
+.proj-bg{background:var(--navy-mid);}
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.proj-card{background:var(--navy-card);border:1px solid var(--gold-border);padding:2rem;position:relative;transition:border-color 0.2s;}
+.proj-card:hover{border-color:var(--gold);}
+.proj-tag{font-size:11px;letter-spacing:0.18em;color:var(--gold);text-transform:uppercase;margin-bottom:0.75rem;}
+.proj-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;margin-bottom:0.6rem;line-height:1.3;color:var(--wh);}
+.proj-desc{font-size:14px;color:var(--text);line-height:1.9;margin-bottom:1.2rem;opacity:0.8;}
+.proj-metrics{display:flex;gap:0.5rem;flex-wrap:wrap;}
+.proj-metric{font-size:12px;color:var(--gold-light);background:var(--gold-glow);border:1px solid var(--gold-border);padding:4px 11px;font-weight:500;}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+.skill-card{background:var(--navy-mid);border:1px solid var(--divider);padding:1.5rem;transition:border-color 0.2s;}
+.skill-card:hover{border-color:var(--gold-border);}
+.skill-cat{font-size:12px;color:var(--gold);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.9rem;font-weight:600;}
+.skill-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.skill-tag{font-size:12px;background:rgba(212,168,83,0.05);color:var(--text);padding:4px 10px;border:1px solid var(--divider);}
+.edu-bg{background:var(--navy-mid);}
+.edu-list{display:flex;flex-direction:column;}
+.edu-item{display:grid;grid-template-columns:90px 1fr;gap:2rem;padding:1.6rem 0;border-bottom:1px solid var(--divider);}
+.edu-year{font-size:13px;color:var(--gold);letter-spacing:0.06em;padding-top:2px;}
+.edu-degree{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;margin-bottom:4px;color:var(--wh);}
+.edu-school{font-size:13px;color:var(--muted);}
+.edu-note{font-size:12px;color:var(--gold);margin-top:5px;opacity:0.8;}
+.contact-bg{background:var(--navy);}
+.contact-text{font-size:1.05rem;color:var(--text);line-height:2;margin-bottom:2rem;max-width:600px;}
+.contact-links{display:flex;flex-direction:column;gap:0.9rem;max-width:560px;}
+.cl{display:flex;align-items:center;gap:1rem;text-decoration:none;color:var(--wh);font-size:14px;padding:1.1rem 1.4rem;border:1px solid var(--divider);transition:all 0.2s;cursor:pointer;background:var(--navy-mid);}
+.cl:hover{border-color:var(--gold);background:var(--gold-glow);}
+.cl-icon{width:36px;height:36px;background:var(--gold-glow);border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.cl-icon svg{width:16px;height:16px;stroke:var(--gold);}
+.cl-lbl{font-size:11px;color:var(--muted);letter-spacing:0.08em;display:block;margin-bottom:2px;}
+.cl-val{font-size:14px;color:var(--wh);}
+footer{background:var(--navy-mid);padding:1.75rem 3rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--divider);}
+footer p{font-size:13px;color:var(--muted);}
+.gt{color:var(--gold);}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">
+    <div class="nav-circle">AQ</div>
+    <span class="nav-name">Ahmad Qushmaq</span>
+  </div>
+  <div class="nav-links">
+    <a onclick="goTo('about')">About</a>
+    <a onclick="goTo('experience')">Experience</a>
+    <a onclick="goTo('projects')">Projects</a>
+    <a onclick="goTo('skills')">Skills</a>
+    <a onclick="goTo('education')">Education</a>
+    <a onclick="goTo('contact')">Contact</a>
+  </div>
+</nav>
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-line-v"></div>
+  <div class="hero-tag">Washington, D.C. &middot; Senior IT & Cybersecurity Executive</div>
+  <h1 class="hero-name">Ahmad<br/><span>Qushmaq</span></h1>
+  <div class="hero-divider"></div>
+  <p class="hero-title">SVP, Information Technology &amp; Cybersecurity</p>
+  <div class="hero-loc">&#128205; Washington, D.C., USA</div>
+  <div class="hero-contact-line">qtechmac@yahoo.com &middot; (571) 206-2600 &middot; linkedin.com/in/ahmadqushmaq</div>
+  <p class="hero-desc">Executive IT and cybersecurity leader with 15+ years driving enterprise risk reduction, secure digital transformation, and organizational resilience. Proven track record building cybersecurity programs from the ground up, leading M&amp;A IT integrations, and translating complex cyber risk into board-level decisions. Trusted advisor to C-suite and executive leadership on technology strategy, vendor management, and regulatory compliance.</p>
+  <div class="hero-actions">
+    <a href="mailto:qtechmac@yahoo.com" class="hero-cta">
+      <span>Get in Touch</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+    <div class="hero-badge">Open to New Opportunities</div>
+  </div>
+</section>
+<div class="impact-banner">
+  <div class="ib-item"><div class="ib-num">$750K+</div><div class="ib-label">Cost Savings via Licensing &amp; Vendor Rationalization</div></div>
+  <div class="ib-item"><div class="ib-num">50%</div><div class="ib-label">Reduction in Employee Onboarding Time</div></div>
+  <div class="ib-item"><div class="ib-num">75%+</div><div class="ib-label">Reduction in Helpdesk Ticket Wait Time</div></div>
+  <div class="ib-item"><div class="ib-num">30%</div><div class="ib-label">Reduction in Project Processing Time via Workflow Optimization</div></div>
+</div>
+<section class="about" id="about">
+  <div class="sl">Who I Am</div>
+  <div class="about-grid">
+    <div>
+      <h2 class="st st-only">15+ Years Delivering Executive IT Leadership &amp; Measurable ROI</h2>
+      <p class="about-text">Ahmad Qushmaq is a senior technology executive based in Washington, D.C. who generates measurable business value from IT. With a track record of building cybersecurity programs from scratch, delivering cost savings through disciplined vendor management, and executing zero-disruption M&amp;A integrations, Ahmad translates complex technology decisions into financial outcomes boards can see.<br/><br/>Deep expertise in Zero Trust architecture, identity and access management (IAM), endpoint security, incident response, and AI governance. Spearheaded enterprise-wide Microsoft 365 Copilot adoption and established AI use and data governance frameworks.</p>
+      <div class="awards">
+        <div class="award"><div class="award-dot"></div><span>MIT Professional Education, Digital Transformation: AI, IoT, Cloud &amp; Cybersecurity (2022)</span></div>
+        <div class="award"><div class="award-dot"></div><span>Team of the Year &mdash; Spectrum Science Communications (2024)</span></div>
+        <div class="award"><div class="award-dot"></div><span>"The Friend" Award &mdash; Spectrum Science Communications (2017)</span></div>
+        <div class="award"><div class="award-dot"></div><span>"The Duct Tape" Award &mdash; Spectrum Science Communications (2016 &amp; 2018)</span></div>
+        <div class="award"><div class="award-dot"></div><span>First-Place Award, Best Senior Project in Network &amp; OS Security, KA University (2004)</span></div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="stat-num">15+</div><div class="stat-lbl">Years of Experience</div></div>
+      <div class="stat"><div class="stat-num">8+</div><div class="stat-lbl">Years at SVP/VP Level</div></div>
+      <div class="stat"><div class="stat-num">4x</div><div class="stat-lbl">M&amp;A IT Integrations Led</div></div>
+      <div class="stat"><div class="stat-num">30+</div><div class="stat-lbl">Enterprise Policies &amp; SOPs Owned</div></div>
+    </div>
+  </div>
+</section>
+<section id="experience">
+  <div class="sl">Career</div>
+  <h2 class="st st-only">Experience</h2>
+  <div class="exp-list">
+    <div class="exp-item">
+      <div><div class="exp-year">Oct 2024 &mdash; Present</div><div class="exp-co">Spectrum Science Comms</div></div>
+      <div>
+        <div class="exp-role">Senior Vice President, Information Technology</div>
+        <div class="exp-org">Spectrum Science Communications &middot; Washington, D.C.</div>
+        <div class="exp-desc">Define and execute enterprise IT strategy and multi-year technology roadmap aligned to business priorities. Own the enterprise cybersecurity program at the executive level, strengthening Zero Trust-aligned policies across identity, endpoints, and collaboration tools. Serve as Data Protection Officer (DPO) overseeing GDPR, HIPAA, and CCPA/CPRA compliance. Lead IT governance, financial management, and vendor strategy. Partner with executive leadership on M&amp;A activity: lead IT due diligence, integration planning, and post-close migrations.</div>
+        <div class="exp-achieve">
+          <div class="exp-achieve-item">Spearheaded enterprise AI transformation by introducing Microsoft 365 Copilot, implementing priority use cases, and establishing AI Use &amp; Governance Policy, delivering measurable productivity gains across the organization</div>
+          <div class="exp-achieve-item">Led IT integration for multiple acquisitions, executing seamless migrations of infrastructure, identity systems, and user accounts with zero business disruption</div>
+          <div class="exp-achieve-item">Created and owned the company-wide Cybersecurity Policy; serving as acting Cybersecurity Officer, driving enterprise rollout, enablement training, and policy enforcement</div>
+          <div class="exp-achieve-item">Owned 30+ enterprise policies and SOPs including IT Security &amp; Acceptable Use, AI Use &amp; Governance, Incident Response, Global Data Protection, BC/DR, and more</div>
+        </div>
+        <div class="exp-savings">
+          <span class="exp-saving-pill">Cost Optimization</span>
+          <span class="exp-saving-pill">Zero M&amp;A Disruption</span>
+          <span class="exp-saving-pill">Risk Reduction</span>
+          <span class="exp-saving-pill">AI-Driven Productivity</span>
+        </div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div><div class="exp-year">Mar 2022 &mdash; Oct 2024</div><div class="exp-co">Spectrum Science Comms</div></div>
+      <div>
+        <div class="exp-role">Vice President, Information Technology</div>
+        <div class="exp-org">Spectrum Science Communications &middot; Washington, D.C.</div>
+        <div class="exp-desc">Led enterprise IT strategy and day-to-day operations across infrastructure, cloud services (M365/Azure AD/Entra ID), endpoint management, and service desk. Owned M365/Azure AD/Entra ID administration: managed identity lifecycle, licensing governance, conditional access policies, and MFA enforcement. Managed IT budget, vendor relationships, and contract negotiations. Delivered IT integration for acquired entities.</div>
+        <div class="exp-achieve">
+          <div class="exp-achieve-item">Strengthened identity and access posture by refining MFA and conditional access policies, standardizing account lifecycle controls, and reducing attack surface across cloud environments</div>
+          <div class="exp-achieve-item">Delivered infrastructure modernization initiatives, improving reliability and reducing recurring support ticket volume through proactive remediation</div>
+          <div class="exp-achieve-item">Optimized Microsoft, Cisco/Meraki, and other vendor licensing through strategic renegotiation, delivering recurring annual savings</div>
+        </div>
+        <div class="exp-savings">
+          <span class="exp-saving-pill">Breach Cost Reduction</span>
+          <span class="exp-saving-pill">Licensing Savings</span>
+          <span class="exp-saving-pill">Operational Efficiency</span>
+        </div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div><div class="exp-year">Oct 2019 &mdash; Mar 2022</div><div class="exp-co">Spectrum Science Comms</div></div>
+      <div>
+        <div class="exp-role">Information Technology Director</div>
+        <div class="exp-org">Spectrum Science Communications &middot; Washington, D.C.</div>
+        <div class="exp-desc">Administered all enterprise IT infrastructure, assets, and security policies. Led cybersecurity hardening: implemented MFA organization-wide, strengthened password and access control policies, and established vulnerability remediation workflows. Designed and deployed a high-availability hyper-converged file server.</div>
+        <div class="exp-achieve">
+          <div class="exp-achieve-item">Enabled rapid transition to fully remote operations for 120+ users across 4 locations within 24 hours of March 2020 office closures, with zero productivity loss</div>
+          <div class="exp-achieve-item">Reduced employee onboarding time by 50% by redesigning onboarding processes and cross-functional handoffs</div>
+          <div class="exp-achieve-item">Migrated file server from hybrid Azure to SharePoint Online, resolving sync issues and increasing productivity by 85%</div>
+        </div>
+        <div class="exp-savings">
+          <span class="exp-saving-pill">Business Continuity</span>
+          <span class="exp-saving-pill">50% Onboarding Cost Cut</span>
+          <span class="exp-saving-pill">85% Productivity Gain</span>
+        </div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div><div class="exp-year">Jan 2017 &mdash; Oct 2019</div><div class="exp-co">Spectrum Science Comms</div></div>
+      <div>
+        <div class="exp-role">Information Technology Manager</div>
+        <div class="exp-org">Spectrum Science Communications &middot; Washington, D.C.</div>
+        <div class="exp-desc">Built the IT department from the ground up, creating foundational processes, infrastructure architecture, and IT governance framework. Redesigned network topology from hub-based to mesh architecture. Deployed Cisco Meraki, Mimecast, and Cylance Protect. Negotiated service agreements with Dell and Microsoft, reducing annual fees. Managed and mentored a team of four IT technicians and engineers.</div>
+        <div class="exp-savings">
+          <span class="exp-saving-pill">Vendor Contract Savings</span>
+          <span class="exp-saving-pill">Network Reliability Gain</span>
+          <span class="exp-saving-pill">Team Leadership</span>
+        </div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div><div class="exp-year">May 2016 &mdash; Jan 2017</div><div class="exp-co">Griffin Networks</div></div>
+      <div>
+        <div class="exp-role">Network Engineer</div>
+        <div class="exp-org">Griffin Networks &middot; Gaithersburg, MD</div>
+        <div class="exp-desc">Managed the firm's largest client account in the DC metropolitan area, providing on-site and remote IT support for 130+ users across four offices, plus 120 additional users across European and Asian operations.</div>
+        <div class="exp-achieve">
+          <div class="exp-achieve-item">Reduced open helpdesk ticket wait time by 75%+ through process improvements, boosting end-user productivity and satisfaction</div>
+          <div class="exp-achieve-item">Conducted comprehensive infrastructure review and delivered adoption-ready recommendations that improved client operations and system stability</div>
+        </div>
+        <div class="exp-savings">
+          <span class="exp-saving-pill">75% Ticket Wait Reduction</span>
+          <span class="exp-saving-pill">Multi-Region Support</span>
+        </div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div><div class="exp-year">Aug 2009 &mdash; May 2016</div><div class="exp-co">GuruSquad LLC</div></div>
+      <div>
+        <div class="exp-role">Information Technology Consultant</div>
+        <div class="exp-org">GuruSquad LLC &middot; Fairfax, VA</div>
+        <div class="exp-desc">Provided enterprise IT support and consulting to clients across the DC metro area. Conducted technical security audits and delivered remediation plans. Managed large-scale data replication and storage solution projects. Promoted to team lead within six months; managed up to five employees.</div>
+        <div class="exp-achieve">
+          <div class="exp-achieve-item">Reduced project processing time by 30% by identifying execution bottlenecks and streamlining delivery workflows</div>
+          <div class="exp-achieve-item">Led development and delivery of a major electronic medical records system for healthcare clients</div>
+        </div>
+        <div class="exp-savings">
+          <span class="exp-saving-pill">30% Processing Time Cut</span>
+          <span class="exp-saving-pill">Healthcare IT</span>
+        </div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div><div class="exp-year">May 2007 &mdash; Jul 2009</div><div class="exp-co">Univ. of South Florida</div></div>
+      <div>
+        <div class="exp-role">Technical Support Assistant</div>
+        <div class="exp-org">English Language Institute &mdash; University of South Florida &middot; Tampa, FL</div>
+        <div class="exp-desc">Delivered Tier I IT support to employees, faculty, and students. Administered institute website and content. Led transition from paper-based archiving to an electronic filing system and applied network security standards across the institute.</div>
+        <div class="exp-savings">
+          <span class="exp-saving-pill">Tier I Support</span>
+          <span class="exp-saving-pill">Network Security</span>
+          <span class="exp-saving-pill">Digital Archiving</span>
+        </div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div><div class="exp-year">Jan 2005 &mdash; Aug 2006</div><div class="exp-co">King Abdulaziz University</div></div>
+      <div>
+        <div class="exp-role">IT Project Manager</div>
+        <div class="exp-org">Distance Learning Center &mdash; King Abdulaziz University &middot; Jeddah, KSA</div>
+        <div class="exp-desc">Managed the implementation of the E-Learning system for part-time students at the university's Distance Learning Center.</div>
+        <div class="exp-achieve">
+          <div class="exp-achieve-item">Managed the implementation of the E-Learning system for part-time students</div>
+          <div class="exp-achieve-item">Coordinated with the IT center of the university to align infrastructure and support requirements</div>
+          <div class="exp-achieve-item">Configured the network to facilitate and support the use of the E-Learning web application</div>
+          <div class="exp-achieve-item">Evaluated the set of technologies used in the center and provided improvement recommendations</div>
+          <div class="exp-achieve-item">Created a software and applications inventory system for the center</div>
+        </div>
+        <div class="exp-savings">
+          <span class="exp-saving-pill">E-Learning Implementation</span>
+          <span class="exp-saving-pill">Network Configuration</span>
+          <span class="exp-saving-pill">IT Inventory System</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="proj-bg" id="projects">
+  <div class="sl">Impact</div>
+  <h2 class="st st-only">Key Projects &amp; Financial Impact</h2>
+  <div class="proj-grid">
+    <div class="proj-card">
+      <div class="proj-tag">AI Governance &middot; Productivity</div>
+      <div class="proj-title">Enterprise AI Transformation &amp; Governance</div>
+      <div class="proj-desc">Spearheaded the organization's first Microsoft 365 Copilot deployment. Established AI Use &amp; Data Governance Policy and implemented priority use cases, reducing manual task hours and driving productivity gains estimated at 20–30% in targeted workflows. Served on the AI board and shaped enterprise AI adoption strategy.</div>
+      <div class="proj-metrics"><span class="proj-metric">20–30% Productivity Gain</span><span class="proj-metric">First Mover</span><span class="proj-metric">AI Policy Authored</span></div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-tag">M&amp;A &middot; Zero Disruption</div>
+      <div class="proj-title">Multi-Acquisition IT Integration Program</div>
+      <div class="proj-desc">Led IT due diligence and post-close migrations across 4+ acquisitions. Executed zero-disruption migrations of infrastructure, identities, and user accounts across multiple acquired entities including international companies, enforcing enterprise cybersecurity policies at scale.</div>
+      <div class="proj-metrics"><span class="proj-metric">4+ Acquisitions</span><span class="proj-metric">$400K+ Downtime Avoided</span><span class="proj-metric">Zero Disruption</span></div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-tag">Cybersecurity &middot; Cost Avoidance</div>
+      <div class="proj-title">Enterprise Cybersecurity Program Build-Out</div>
+      <div class="proj-desc">Built the organization's cybersecurity program from zero: Zero Trust architecture, incident response, SOC monitoring, EDR deployment, and enterprise Cybersecurity Policy. Managed client-driven cybersecurity assessments and third-party audits end-to-end. Reduced breach risk exposure estimated at $4M+ average industry breach cost.</div>
+      <div class="proj-metrics"><span class="proj-metric">$4M+ Risk Exposure Reduced</span><span class="proj-metric">Zero Trust</span><span class="proj-metric">EDR Deployed</span></div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-tag">Business Continuity &middot; COVID-19</div>
+      <div class="proj-title">Remote Operations: 120+ Users, 24 Hours, Zero Loss</div>
+      <div class="proj-desc">Transitioned 120+ users across 4 locations to fully remote operations within 24 hours of March 2020 office closures, with zero productivity loss during the transition. Preserved business continuity value and avoided contract penalties from client delivery disruptions.</div>
+      <div class="proj-metrics"><span class="proj-metric">Zero Productivity Loss</span><span class="proj-metric">120+ Users</span><span class="proj-metric">4 Locations</span></div>
+    </div>
+  </div>
+</section>
+<section id="skills">
+  <div class="sl">Expertise</div>
+  <h2 class="st st-only">Core Competencies</h2>
+  <div class="skills-grid">
+    <div class="skill-card"><div class="skill-cat">Cybersecurity</div><div class="skill-tags"><span class="skill-tag">Zero Trust Architecture</span><span class="skill-tag">IAM</span><span class="skill-tag">Incident Response &amp; Forensics</span><span class="skill-tag">EDR</span><span class="skill-tag">Threat &amp; Vuln Mgmt</span><span class="skill-tag">Cisco Meraki / Duo</span><span class="skill-tag">Mimecast</span></div></div>
+    <div class="skill-card"><div class="skill-cat">IT Strategy &amp; Cloud</div><div class="skill-tags"><span class="skill-tag">Digital Transformation</span><span class="skill-tag">M365 / Azure AD / Entra ID</span><span class="skill-tag">Enterprise Architecture</span><span class="skill-tag">HCI Infrastructure</span><span class="skill-tag">IT Roadmap</span><span class="skill-tag">Vendor Management</span></div></div>
+    <div class="skill-card"><div class="skill-cat">Governance &amp; Compliance</div><div class="skill-tags"><span class="skill-tag">GDPR</span><span class="skill-tag">HIPAA</span><span class="skill-tag">CCPA/CPRA</span><span class="skill-tag">CIS</span><span class="skill-tag">AI Governance</span><span class="skill-tag">Data Classification</span><span class="skill-tag">Board Risk Reporting</span></div></div>
+    <div class="skill-card"><div class="skill-cat">Financial Impact</div><div class="skill-tags"><span class="skill-tag">IT Budget Planning</span><span class="skill-tag">Cost Optimization</span><span class="skill-tag">Vendor Negotiation</span><span class="skill-tag">ROI Reporting</span><span class="skill-tag">P&amp;L Ownership</span></div></div>
+    <div class="skill-card"><div class="skill-cat">AI &amp; Emerging Tech</div><div class="skill-tags"><span class="skill-tag">Microsoft 365 Copilot</span><span class="skill-tag">AI Governance Policy</span><span class="skill-tag">IoT Security</span><span class="skill-tag">Blockchain</span><span class="skill-tag">Responsible AI</span></div></div>
+    <div class="skill-card"><div class="skill-cat">Leadership</div><div class="skill-tags"><span class="skill-tag">Executive Stakeholder Mgmt</span><span class="skill-tag">Team Building &amp; Mentorship</span><span class="skill-tag">M&amp;A IT Integration</span><span class="skill-tag">Multi-site Mgmt</span><span class="skill-tag">DPO</span></div></div>
+  </div>
+</section>
+<section class="edu-bg" id="education">
+  <div class="sl">Background</div>
+  <h2 class="st st-only">Education &amp; Certifications</h2>
+  <div class="edu-list">
+    <div class="edu-item"><div class="edu-year">2022</div><div><div class="edu-degree">Digital Transformation: AI, IoT, Cloud, Blockchain &amp; Cybersecurity</div><div class="edu-school">Massachusetts Institute of Technology (MIT) &mdash; Professional Education</div></div></div>
+    <div class="edu-item"><div class="edu-year">2012</div><div><div class="edu-degree">Certificate in Information Security &amp; Assurance</div><div class="edu-school">Volgenau School of Engineering, George Mason University</div></div></div>
+    <div class="edu-item"><div class="edu-year">2009</div><div><div class="edu-degree">M.S., Management Information Systems</div><div class="edu-school">University of South Florida, Tampa, FL</div></div></div>
+    <div class="edu-item"><div class="edu-year">2004</div><div><div class="edu-degree">B.S., Computer Science</div><div class="edu-school">KA University, Jeddah, Saudi Arabia</div><div class="edu-note">First-Place Award, Best Senior Project in Network &amp; OS Security</div></div></div>
+  </div>
+</section>
+<section class="contact-bg" id="contact">
+  <div class="sl">Get in Touch</div>
+  <h2 class="st st-only">Let's Connect</h2>
+  <p class="contact-text">Senior IT and cybersecurity executive with 15+ years of progressive experience. Based in Washington, D.C. and open to new senior executive opportunities. Let's discuss how my track record of ROI-driven IT leadership, cybersecurity program development, and M&amp;A integration expertise can bring value to your organization.</p>
+  <div class="contact-links">
+    <a href="mailto:qtechmac@yahoo.com" class="cl"><div class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div><div><span class="cl-lbl">EMAIL</span><span class="cl-val">qtechmac@yahoo.com</span></div></a>
+    <a href="tel:5712062600" class="cl"><div class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92v2z"/></svg></div><div><span class="cl-lbl">PHONE</span><span class="cl-val">(571) 206-2600</span></div></a>
+    <a href="https://www.linkedin.com/in/ahmadqushmaq/" class="cl"><div class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div><div><span class="cl-lbl">LINKEDIN</span><span class="cl-val">linkedin.com/in/ahmadqushmaq</span></div></a>
+    <div class="cl"><div class="cl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><div><span class="cl-lbl">LOCATION</span><span class="cl-val">Washington, D.C., USA</span></div></div>
+  </div>
+</section>
+<footer>
+  <p>&copy; 2026 <span class="gt">Ahmad Qushmaq</span>. All rights reserved.</p>
+  <p>SVP, Information Technology &amp; Cybersecurity</p>
+</footer>
+<script>
+function goTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});}
+</script>
+</body>
+</html>
